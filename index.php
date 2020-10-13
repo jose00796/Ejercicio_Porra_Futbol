@@ -12,5 +12,10 @@ spl_autoload_register(function($classname){
         }
 });
 
+$player = new ejecutable();
+$lista = $player->GetPlayers();
 
+foreach ($lista as $player) {
+    echo "<p> {$player->GetName()}";
+}
 
