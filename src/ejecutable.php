@@ -18,7 +18,7 @@ class ejecutable
         $player = new persona('Ibelise', 5000);
         array_push($lista, $player);
 
-        $player = new persona('Daniel', 5000);
+        $player = new persona('Eiker', 5000);
         array_push($lista, $player);
 
         return $lista;
