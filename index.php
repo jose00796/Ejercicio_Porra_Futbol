@@ -6,6 +6,7 @@ SE QUE LO LOGRARAS IGUAL QUE SIEMPRE.*/
 
 /* 13/10/2020 AHORA SI VAMOS A HACER ESTA MIERDA BIEN NOJODA QUE LADILLA... */
 
+require_once "helpers.php";
 spl_autoload_register(function($classname){
         if (file_exists("src/$classname.php")) {
             require "src/$classname.php";
@@ -14,8 +15,10 @@ spl_autoload_register(function($classname){
 
 $player = new ejecutable();
 $lista = $player->GetPlayers();
+$container = new pote();
 
 foreach ($lista as $player) {
-    echo "<p> {$player->GetName()}";
+     Show("{$player->GetName()}");
+    $player->SetMoney();
+    $player->Deposit($container);   
 }
-
